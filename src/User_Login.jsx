@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./UserAuth.css";
+import { useNavigate } from "react-router";
 
 function User_Login(){
     const [data, setdata] = useState("");
@@ -11,6 +12,8 @@ function User_Login(){
     const [show, setshow] = useState(true);
     const [success, setsuccess] = useState("");
     const [loading, setloading] = useState(false);
+
+    const navigate = useNavigate();
 
     const email_regex = /^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/;
 
@@ -48,6 +51,7 @@ function User_Login(){
                 console.log("Login Successfull!")
                 console.log("Token stored in browser")
             }
+            navigate("/profile");
             setemail("");
             setpassword("");
         }catch(err){
