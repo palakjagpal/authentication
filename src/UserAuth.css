@@ -161,4 +161,78 @@ button:focus{
 
 }
 
+.profile {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease;
+}
 
+.profile h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #164e45;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.d {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e0f0ea;
+  padding-bottom: 15px;
+}
+
+.d:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.d h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5b8b80;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.d h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f6b5c;
+  word-break: break-word; 
+}
+
+.profile p {
+  text-align: center;
+  color: #5b8b80;
+  font-size: 16px;
+  padding: 20px;
+}
+
+@media (max-width: 480px) {
+  .profile {
+    padding: 20px 18px;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .profile h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .d h3 {
+    font-size: 18px;
+  }
+}
